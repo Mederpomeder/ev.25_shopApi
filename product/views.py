@@ -22,3 +22,4 @@ class ProductViewSet(ModelViewSet):
         if self.action in ('update', 'partial_update', 'destroy'):
             return [permissions.IsAuthenticated(), IsAuthor()]
         return [permissions.IsAuthenticatedOrReadOnly()]
+
